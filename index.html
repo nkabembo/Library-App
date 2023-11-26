@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Library App</title>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <img src="books.png" alt="">
+            <H1>My Library</H1>
+        </header>
+        <div class="content-area">
+            <aside>
+                <h2>Add Book <span class="add-dropdown" onclick="DropDownToggle()"><i class="fa-solid fa-chevron-down"></i></span></h2>
+                <form class="add-form">
+                    <label for="title">Book title</label>
+                    <input type="text" name="title" id="title">
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author">
+                    <label for="page-count">Page Count</label>
+                    <input type="number" name="page-count" id="page-count">
+                    <label for="status"></label>
+                    <select name="status" id="status">
+                        <option value="read">Read</option>
+                        <option value="not-read">Not Read</option>
+                    </select>
+                    <button id="add">Add <i class="fa-solid fa-plus"></i></button>
+                </form>
+                
+             </aside>
+             <div class="content">
+                 <div class="books-info">
+                     <h3>BOOKS READ: <span class="read-books">0</span></h3>
+                     <h3>BOOKS UNREAD: <span class="unread-books">0</span></h3>
+                     <h3>TOTAL BOOKS: <span class="total-books">0</span></h3>
+                 </div>
+                 <div class="sorting-area">
+                     <h3>Filter:</h3>
+                     <select name="sort" id="sort">
+                         <option value="all">All</option>
+                         <option value="read">READ</option>
+                         <option value="not">NOT READ</option>
+                       </select>
+                       <button class="delete-all" id="delete-all">DELETE ALL</button>
+                 </div>
+                 <table>
+                     <thead>
+                         <tr>
+                             <th>Book Title</th>
+                             <th>Author</th>
+                             <th>Page Count</th>
+                             <th>Book Status</th>
+                             <th>Edit</th>
+                             <th></th>
+                         </tr>
+                     </thead>
+                     <tbody id="table-display">
+                        <tr>
+                            <td>Hello</td>
+                            <td>Bill James</td>
+                            <td> 9 </td>
+                            <td><div class="read-status">READ</div></td>
+                            <td><i class="fa-regular fa-pen-to-square"></i></td>
+                            <td><i class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Hello</td>
+                            <td>Bill James</td>
+                            <td> 9 </td>
+                            <td><div class="not-read-status">NOT READ</div></td>
+                            <td><i class="fa-regular fa-pen-to-square"></i></td>
+                            <td><i class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        
+                     </tbody>
+                     
+                 </table>
+             </div>
+        </div>
+        <dialog id="delete-dialog">
+            <form action="" id="delete-form">
+                <h3>Deleting</h3>
+                <p>Are you sure you want to delete all books?</p>
+                <div class="buttons">
+                    <button class="cancel">Cancel</button>
+                    <button class="delete">Delete All</button>
+                </div>
+            </form>
+        </dialog>
+        <!--
+            
+        <dialog id=edit-dialog>
+            <form action="" id="edit-form">
+                <h3>Edit</h3>
+                <label for="title">Book title</label>
+                <input type="text" name="title" id="edit-title">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="edit-author">
+                <label for="page-count">Page Count</label>
+                <input type="number" name="page-count" id="edit-pages">
+                <label for="status"></label>
+                <select name="status" id="edit-status">
+                 <option value="read">Read</option>
+                 <option value="not-read">Not Read</option>
+               </select>
+               <div class="buttons">
+                    <button class="cancel">Cancel</button>
+                    <button type="submit" class="edit">Edit <i class="fa-regular fa-pen-to-square"></i></button>
+               </div>
+            </form>
+        </dialog>
+        -->
+        
+    </main>
+</body>
+</html>
