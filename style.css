@@ -13,7 +13,8 @@ body{
     color: var(--dark-text);
 }
 .content-area{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 72vw;
     column-gap: 10px;
 }
 .add-form{
@@ -45,8 +46,7 @@ aside{
     width: 350px;
     text-align: center;
     padding: 10px;
-    height: 92vh;
-    display: fixed;
+    grid-row: 1 / -1; 
     left: 0;
 }
 h2{
@@ -105,11 +105,9 @@ button:hover{
     column-gap: 10px;
     justify-content: center;
     margin: 10px 30px;
-    width: 100%;
+    width: 90%;
 }
-.content{
-    width: calc(100% - 460px);
-}
+
 .sorting-area{
     display: flex;
     justify-content: center;
@@ -121,8 +119,7 @@ thead{
 }
 table{
     font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 20px;
 }
 thead{
     font-size: 24px;

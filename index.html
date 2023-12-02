@@ -28,7 +28,7 @@
                     <label for="status"></label>
                     <select name="status" id="status">
                         <option value="read">Read</option>
-                        <option value="not-read">Not Read</option>
+                        <option value="not read">Not Read</option>
                     </select>
                     <button id="add">Add <i class="fa-solid fa-plus"></i></button>
                 </form>
@@ -45,42 +45,30 @@
                      <select name="sort" id="sort">
                          <option value="all">All</option>
                          <option value="read">READ</option>
-                         <option value="not">NOT READ</option>
+                         <option value="not read">NOT READ</option>
                        </select>
                        <button class="delete-all" id="delete-all">DELETE ALL</button>
                  </div>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Book Title</th>
-                             <th>Author</th>
-                             <th>Page Count</th>
-                             <th>Book Status</th>
-                             <th>Edit</th>
-                             <th></th>
-                         </tr>
-                     </thead>
-                     <tbody id="table-display">
-                        <tr>
-                            <td>Hello</td>
-                            <td>Bill James</td>
-                            <td> 9 </td>
-                            <td><div class="read-status">READ</div></td>
-                            <td><i class="fa-regular fa-pen-to-square"></i></td>
-                            <td><i class="fa-solid fa-trash"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Hello</td>
-                            <td>Bill James</td>
-                            <td> 9 </td>
-                            <td><div class="not-read-status">NOT READ</div></td>
-                            <td><i class="fa-regular fa-pen-to-square"></i></td>
-                            <td><i class="fa-solid fa-trash"></i></td>
-                        </tr>
+                 <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Book Title</th>
+                                <th>Author</th>
+                                <th>Page Count</th>
+                                <th>Book Status</th>
+                                <th>Edit</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-display">
+                           
+                           
+                        </tbody>
                         
-                     </tbody>
-                     
-                 </table>
+                    </table>
+                 </div>
+                 
              </div>
         </div>
         <dialog id="delete-dialog">
@@ -93,8 +81,6 @@
                 </div>
             </form>
         </dialog>
-        <!--
-            
         <dialog id=edit-dialog>
             <form action="" id="edit-form">
                 <h3>Edit</h3>
@@ -107,16 +93,14 @@
                 <label for="status"></label>
                 <select name="status" id="edit-status">
                  <option value="read">Read</option>
-                 <option value="not-read">Not Read</option>
+                 <option value="not read">Not Read</option>
                </select>
                <div class="buttons">
-                    <button class="cancel">Cancel</button>
-                    <button type="submit" class="edit">Edit <i class="fa-regular fa-pen-to-square"></i></button>
+                    <button class="cancel-edit">Cancel</button>
+                    <button class="edit">Edit <i class="fa-regular fa-pen-to-square"></i></button>
                </div>
             </form>
         </dialog>
-        -->
-        
     </main>
 </body>
 </html>
